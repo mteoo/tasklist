@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tasklistdb
+    username: root
+    password: admin
+    initialization-mode: always
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+logging:
+  file: demo.log
+  level:
+    com.code.demo: ERROR
+
+springdoc:
+  api-docs:
+    path: /swagger.json
+  swagger-ui:
+    path: /swagger
